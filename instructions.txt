@@ -1,27 +1,32 @@
-Instructions for usage of VTJS-library
-- Library is in very early stage, 
-  therefore currently you can only apply one case per function
+---- Instructions for VTJS-library ----
 
-Setup:
-- Download jquery and call it in html
-- Download vtjs.js-file or create a new one and copy the source code to the file
-- Call the library in html-file (after main jquery-file)
-- Enjoy! (or not)
+--- Setup ---
+-- Download jquery and link it in html
+-- Download vtjs-file or copy its content to existing one and link it in html
+-- Enjoy!
 
-Usage:
-- Create your jquery/javascript-file and call it in your html
-- Define functions in the file
-- Example: var open_activator = "#youractivatorobject"; (var sort of creates 
-  the function, text before underscore specifies which function you are 
-  taking advantage of, class can be used as well)
-- To make a function work, 
-  you always need to define 
-  every variable that specific function uses
-- All functions and variables listed below
+--- Usage ---
+- Define functions with arrays, for example: var open_activator = ['#activator1', '.activator2'];
+- If you use same function for multiple targets, make sure that your parameters for one target have equal position in specific functions arrays,
+  For example:
+	var open_activator = ['#activatorforDIV1', '#activatorforDIV2']; // #activatorforDIV1 activates #DIV1
+	var open_id = ['#DIV1', '#DIV2']; // #activatorforDIV2 activates #DIV2
+- To use function, you need to specify every variable it uses
+  For example:
+	var close_activator = ['#activator'];
+	var close_id = ['#target'];
+	var close_method = ['fade'];
+	var close_animdur = [300];
 
-Functions and their variables:
-- Open object (opens specified object)
-	- var open_activator = '#youractivatorobject'; // Object that activates the function
-	- var open_id = '#yourtargetobject'; // Object that you want to open
-	- var open_method = 'fade'; // 'fade' will fade the object in, 'appear' will just appear the object
-	- var open_animdur = '300'; // Specifies the duration of fade
+
+-- Current functions and variables:
+- Open object
+	- open_activator	// Object that activates open function
+	- open_id		// Target object that will be opened
+	- open_method		// Object opening method. Can be set as appear or fade. Example: var open_method = ['fade'];
+	- open_animdur		// Duration for fade if it is set as method. Time unit is millisecond. For example: var open_animdur = [300]; (will be set to 300 milliseconds)
+- Close object
+	- close_activator	// Object that activates close function
+	- close_id		// Target object that will be closed
+	- close_method		// Object closing method 
+	- close_animdur		// Duration for fade if it is set as method
