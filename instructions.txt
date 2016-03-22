@@ -1,0 +1,27 @@
+Instructions for usage of VTJS-library
+- Library is in very early stage, 
+  therefore currently you can only apply one case per function
+
+Setup:
+- Download jquery and call it in html
+- Download vtjs.js-file or create a new one and copy the source code to the file
+- Call the library in html-file (after main jquery-file)
+- Enjoy! (or not)
+
+Usage:
+- Create your jquery/javascript-file and call it in your html
+- Define functions in the file
+- Example: var open_activator = "#youractivatorobject"; (var sort of creates 
+  the function, text before underscore specifies which function you are 
+  taking advantage of, class can be used as well)
+- To make a function work, 
+  you always need to define 
+  every variable that specific function uses
+- All functions and variables listed below
+
+Functions and their variables:
+- Open object (opens specified object)
+	- var open_activator = '#youractivatorobject'; // Object that activates the function
+	- var open_id = '#yourtargetobject'; // Object that you want to open
+	- var open_method = 'fade'; // 'fade' will fade the object in, 'appear' will just appear the object
+	- var open_animdur = '300'; // Specifies the duration of fade
