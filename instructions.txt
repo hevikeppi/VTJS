@@ -25,8 +25,16 @@
 	- open_id		// Target object that will be opened
 	- open_method		// Object opening method. Can be set as appear or fade. Example: var open_method = ['fade'];
 	- open_animdur		// Duration for fade if it is set as method. Time unit is millisecond. For example: var open_animdur = [300]; (will be set to 300 milliseconds)
+
 - Close object
-	- close_activator	// Object that activates close function
-	- close_id		// Target object that will be closed
-	- close_method		// Object closing method 
-	- close_animdur		// Duration for fade if it is set as method
+	- close_activator
+	- close_id
+	- close_method
+	- close_animdur
+
+- Open and close 		//// Use this function if you want to open and close target object with same activator
+	- openclose_activator
+	- openclose_id
+	- openclose_method	// Object OPENING method
+	- openclose_outmethod	// Object CLOSING method
+	- openclose_animdur
